@@ -16,5 +16,11 @@ namespace MyApp01
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre = txtbox.Text;
+            MessageBox.Show(nombre);
+        }
     }
 }

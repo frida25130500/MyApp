@@ -28,13 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.txtNombre = new System.Windows.Forms.Label();
+            this.txtbox = new System.Windows.Forms.TextBox();
+            this.btnProceso = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.AutoSize = true;
+            this.txtNombre.Location = new System.Drawing.Point(359, 57);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(56, 16);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.Text = "Nombre";
+            // 
+            // txtbox
+            // 
+            this.txtbox.Location = new System.Drawing.Point(259, 110);
+            this.txtbox.Name = "txtbox";
+            this.txtbox.Size = new System.Drawing.Size(256, 22);
+            this.txtbox.TabIndex = 1;
+            // 
+            // btnProceso
+            // 
+            this.btnProceso.Location = new System.Drawing.Point(278, 194);
+            this.btnProceso.Name = "btnProceso";
+            this.btnProceso.Size = new System.Drawing.Size(222, 62);
+            this.btnProceso.TabIndex = 2;
+            this.btnProceso.Text = "Enviar";
+            this.btnProceso.UseVisualStyleBackColor = true;
+            this.btnProceso.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnProceso);
+            this.Controls.Add(this.txtbox);
+            this.Controls.Add(this.txtNombre);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label txtNombre;
+        private System.Windows.Forms.TextBox txtbox;
+        private System.Windows.Forms.Button btnProceso;
     }
 }
 
