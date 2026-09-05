@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace MyApp01
     public partial class OFP : Form
     {
         bool save = false;
+        string Path;
+        // cambios;
         public OFP()
         {
             InitializeComponent();
@@ -20,9 +23,9 @@ namespace MyApp01
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            DialogResult = ds;
-            ofpAbrir.ShowDialog();
-           
+            // DialogResult = ds;
+            //ofpAbrir.ShowDialog();
+
 
         }
 
@@ -38,20 +41,54 @@ namespace MyApp01
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ofpAbrir.ShowDialog() == DialogResult.OK) {
-            rctTexto.LoadFile(ofpAbrir.FileName, RichTextBoxStreamType.PlainText);
+            if (ofpAbrir.ShowDialog() == DialogResult.OK)
+            {
 
+                rctTexto.LoadFile(ofpAbrir.FileName, RichTextBoxStreamType.PlainText);
+                guardarComoToolStripMenuItem.Enabled = false;
 
+            }
         }
-    }
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         if (save==false) {   
-         if (sfdGuardar.ShowDialog() == DialogResult.OK)
+            if (save == false)
+            {
+                if (sfdGuardar.ShowDialog() == DialogResult.OK)
                 {
-                save = true;
+                    Path = sfdGuardar.FileName;
+                    save = true;
+
                 }
+
+            }
+            rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
+
+        }
+
+        private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (sfdGuardar.ShowDialog(this) == DialogResult.OK)
+            {
+                Path = sfdGuardar.FileName;
+                rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
+                guardarToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rctTexto.Clear();
+            rctTexto.Focus ();
+            Path = "";
+            save = false;
+            //guardarComoToolStripMenuItem1 = false;
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }
+}
