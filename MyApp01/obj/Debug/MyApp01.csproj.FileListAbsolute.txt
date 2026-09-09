@@ -1,0 +1,10 @@
+C:\App\mygit\MyApp01\MyApp01\bin\Debug\MyApp01.exe.config
+C:\App\mygit\MyApp01\MyApp01\bin\Debug\MyApp01.exe
+C:\App\mygit\MyApp01\MyApp01\bin\Debug\MyApp01.pdb
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.AssemblyReference.cache
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.Form1.resources
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.Properties.Resources.resources
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.GenerateResource.cache
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.CoreCompileInputs.cache
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.exe
+C:\App\mygit\MyApp01\MyApp01\obj\Debug\MyApp01.pdb
