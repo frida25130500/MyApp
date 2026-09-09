@@ -122,7 +122,7 @@ namespace MyApp01
             {
                 rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
                 toolStripStatusLabel1.Text = "Archivo guardado";
-                //
+                
                 contador = 0;
             }
         }
