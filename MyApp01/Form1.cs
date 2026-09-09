@@ -11,14 +11,19 @@ using System.Windows.Forms;
 
 namespace MyApp01
 {
+
     public partial class OFP : Form
     {
+        //se agrega un contador
+        int contador = 0;
+        
         bool save = false;
         string Path;
         // cambios;
         public OFP()
         {
             InitializeComponent();
+            
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -48,6 +53,10 @@ namespace MyApp01
                 rctTexto.LoadFile(ofpAbrir.FileName, RichTextBoxStreamType.PlainText);
                 guardarComoToolStripMenuItem.Enabled = false;
 
+                //agregar contadores
+                contador = 0;
+                timer.Start();
+
             }
         }
 
@@ -66,6 +75,10 @@ namespace MyApp01
             rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
             guardarToolStripMenuItem.Enabled = false;
 
+            //agregar contadores
+            contador = 0;
+            timer.Start();
+
         }
 
         private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,13 +89,15 @@ namespace MyApp01
                 rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
                 guardarToolStripMenuItem.Enabled = true;
                 save = true;
+
+                
             }
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rctTexto.Clear();
-            rctTexto.Focus ();
+            rctTexto.Focus();
             Path = "";
             save = false;
             //guardarComoToolStripMenuItem1 = false;
@@ -96,7 +111,25 @@ namespace MyApp01
 
         private void rctTexto_TextChanged(object sender, EventArgs e)
         {
-        guardarToolStripMenuItem.Enabled = true;
+            guardarToolStripMenuItem.Enabled = true;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            contador++;
+
+            if (contador >= 30)
+            {
+                rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
+                toolStripStatusLabel1.Text = "Archivo guardado";
+                //
+                contador = 0;
+            }
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

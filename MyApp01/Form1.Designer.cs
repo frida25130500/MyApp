@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ofpAbrir = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +39,11 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rctTexto = new System.Windows.Forms.RichTextBox();
             this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
+            this.status = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
+            this.status.SuspendLayout();
             this.SuspendLayout();
             // 
             // ofpAbrir
@@ -53,7 +58,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(746, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -110,22 +115,46 @@
             this.rctTexto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rctTexto.Location = new System.Drawing.Point(0, 28);
             this.rctTexto.Name = "rctTexto";
-            this.rctTexto.Size = new System.Drawing.Size(800, 422);
+            this.rctTexto.Size = new System.Drawing.Size(746, 421);
             this.rctTexto.TabIndex = 2;
             this.rctTexto.Text = "";
             this.rctTexto.TextChanged += new System.EventHandler(this.rctTexto_TextChanged);
+            // 
+            // status
+            // 
+            this.status.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.status.Location = new System.Drawing.Point(0, 427);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(746, 22);
+            this.status.TabIndex = 3;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // OFP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(746, 449);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.rctTexto);
             this.Controls.Add(this.menuStrip2);
             this.Name = "OFP";
             this.Text = "Form1";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.status.ResumeLayout(false);
+            this.status.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +171,9 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.RichTextBox rctTexto;
         private System.Windows.Forms.SaveFileDialog sfdGuardar;
+        private System.Windows.Forms.StatusStrip status;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
