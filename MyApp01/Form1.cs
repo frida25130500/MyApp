@@ -43,7 +43,8 @@ namespace MyApp01
         {
             if (ofpAbrir.ShowDialog() == DialogResult.OK)
             {
-
+                Path = ofpAbrir.FileName;
+                save = true;
                 rctTexto.LoadFile(ofpAbrir.FileName, RichTextBoxStreamType.PlainText);
                 guardarComoToolStripMenuItem.Enabled = false;
 
@@ -63,6 +64,7 @@ namespace MyApp01
 
             }
             rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
+            guardarToolStripMenuItem.Enabled = false;
 
         }
 
@@ -72,7 +74,8 @@ namespace MyApp01
             {
                 Path = sfdGuardar.FileName;
                 rctTexto.SaveFile(Path, RichTextBoxStreamType.PlainText);
-                guardarToolStripMenuItem.Enabled = false;
+                guardarToolStripMenuItem.Enabled = true;
+                save = true;
             }
         }
 
@@ -89,6 +92,11 @@ namespace MyApp01
         {
             this.Close();
 
+        }
+
+        private void rctTexto_TextChanged(object sender, EventArgs e)
+        {
+        guardarToolStripMenuItem.Enabled = true;
         }
     }
 }
