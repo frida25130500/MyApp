@@ -47,6 +47,7 @@
             this.lblreloj.Size = new System.Drawing.Size(63, 69);
             this.lblreloj.TabIndex = 0;
             this.lblreloj.Text = "0";
+            this.lblreloj.Click += new System.EventHandler(this.lblreloj_Click);
             // 
             // tmreloj
             // 

@@ -40,6 +40,7 @@
             this.dtpconfigura.ShowUpDown = true;
             this.dtpconfigura.Size = new System.Drawing.Size(200, 22);
             this.dtpconfigura.TabIndex = 0;
+            this.dtpconfigura.ValueChanged += new System.EventHandler(this.dtpconfigura_ValueChanged);
             // 
             // btnaceptar
             // 

@@ -25,5 +25,10 @@ namespace MyApp01
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void dtpconfigura_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

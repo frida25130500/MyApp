@@ -23,7 +23,7 @@ namespace MyApp01
             lblreloj.Text = DateTime.Now.ToShortTimeString ();
             if (DateTime.Now.ToLongTimeString() == tiempo.ToLongTimeString ())
             {
-                Console.Beep(1000, 200);
+                axWindoMediaPlayer
             }
 
 
@@ -41,6 +41,11 @@ namespace MyApp01
     }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblreloj_Click(object sender, EventArgs e)
         {
 
         }
