@@ -40,7 +40,7 @@
             // 
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.Location = new System.Drawing.Point(120, 117);
+            this.lblfecha.Location = new System.Drawing.Point(120, 72);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(63, 69);
             this.lblfecha.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.lblreloj.AutoSize = true;
             this.lblreloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblreloj.Location = new System.Drawing.Point(120, 276);
+            this.lblreloj.Location = new System.Drawing.Point(120, 187);
             this.lblreloj.Name = "lblreloj";
             this.lblreloj.Size = new System.Drawing.Size(63, 69);
             this.lblreloj.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // btnencender
             // 
-            this.btnencender.Location = new System.Drawing.Point(583, 316);
+            this.btnencender.Location = new System.Drawing.Point(508, 272);
             this.btnencender.Name = "btnencender";
             this.btnencender.Size = new System.Drawing.Size(75, 23);
             this.btnencender.TabIndex = 2;
@@ -74,7 +74,7 @@
             // lblejecucion
             // 
             this.lblejecucion.AutoSize = true;
-            this.lblejecucion.Location = new System.Drawing.Point(129, 393);
+            this.lblejecucion.Location = new System.Drawing.Point(129, 272);
             this.lblejecucion.Name = "lblejecucion";
             this.lblejecucion.Size = new System.Drawing.Size(134, 16);
             this.lblejecucion.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 439);
             this.Controls.Add(this.lblejecucion);
             this.Controls.Add(this.btnencender);
             this.Controls.Add(this.lblreloj);
